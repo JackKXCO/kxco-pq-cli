@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 — 2026-05-24
+
+Fix bin entry that was being stripped during publish (removed `./` prefix).
+
 ## 0.1.1 — 2026-05-24
 
 Maintenance release. No breaking changes.
