@@ -1,6 +1,6 @@
 {
   "name": "kxco-pq-cli",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "CLI for kxco-post-quantum: keygen, fingerprint, key rotation, signed rotation manifests. Generates ML-DSA-65 keypairs deterministically from a master secret + label; emits well-known JSON + RFC 8785 JCS-canonical signed manifests during rotation.",
   "keywords": [
     "post-quantum",

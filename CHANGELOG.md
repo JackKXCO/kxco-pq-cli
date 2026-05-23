@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4 — 2026-05-24
+
+Maintenance release. No breaking changes.
+
+
+
 ## 0.1.3 — 2026-05-24
 
 Maintenance release. No breaking changes.
