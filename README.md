@@ -89,6 +89,32 @@ Then:
 
 The [rotation playbook](https://github.com/JackKXCO/kxco-post-quantum-webhook/blob/main/docs/key-rotation-playbook.md) covers each of these steps in detail.
 
+### `kxco-pq attest sign`
+
+Sign any file with ML-DSA-65 and emit a self-contained JSON attestation envelope. Any counterparty can verify it without trust delegation.
+
+```bash
+kxco-pq attest sign \
+  --secret-key @./keys/secret-key.hex \
+  --public-key @./keys/public-key.hex \
+  --file payload.json \
+  --out payload.attestation.json
+```
+
+Outputs a JSON envelope with `algorithm`, `signerKid`, `issuedAt`, `payload` (base64url), and `signature` (base64url ML-DSA-65).
+
+### `kxco-pq attest verify`
+
+Verify an attestation envelope against a known public key.
+
+```bash
+kxco-pq attest verify \
+  --public-key @./keys/public-key.hex \
+  --attestation payload.attestation.json
+```
+
+Prints `VALID` with signer kid, issue timestamp, and payload size — or `INVALID` with a reason and exits 1.
+
 ## Why a separate package
 
 Rotation events are rare and run from operator workstations — they don't need to live in the runtime webhook library. Splitting the CLI out keeps `kxco-post-quantum-webhook` small (5 framework adapters + verifiers, no CLI overhead in cold-start environments like Vercel Edge / Cloudflare Workers).
