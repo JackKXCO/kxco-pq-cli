@@ -1,7 +1,9 @@
 # kxco-pq-cli
 
 [![npm](https://img.shields.io/npm/v/kxco-pq-cli?label=npm&color=b0964f)](https://www.npmjs.com/package/kxco-pq-cli)
+[![Socket](https://socket.dev/api/badge/npm/package/kxco-pq-cli)](https://socket.dev/npm/package/kxco-pq-cli)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
+[![node](https://img.shields.io/node/v/kxco-pq-cli.svg)](https://nodejs.org)
 
 CLI tooling for the [`kxco-post-quantum`](https://www.npmjs.com/package/kxco-post-quantum) ecosystem. Produces deterministic ML-DSA-65 keypairs from a master + info label, computes kid fingerprints, and orchestrates **signed rotation manifests** for the [webhook contract's key-rotation flow](https://github.com/JackKXCO/kxco-post-quantum-webhook/blob/main/docs/webhook-contract.md#key-rotation-and-history).
 
@@ -122,6 +124,18 @@ Rotation events are rare and run from operator workstations — they don't need 
 ## Wire-format compatibility
 
 The manifest and well-known shapes this CLI emits are stable under the [webhook contract](https://github.com/JackKXCO/kxco-post-quantum-webhook/blob/main/docs/webhook-contract.md). A receiver in Rust/Go/Python that implements the contract can verify manifests this CLI produces without depending on Node.
+
+## Security
+
+All cryptographic operations delegate to [`kxco-post-quantum`](https://www.npmjs.com/package/kxco-post-quantum), which wraps [`@noble/post-quantum`](https://github.com/paulmillr/noble-post-quantum) — audited by Cure53 (2024). Key material is read from files or environment variables; private key bytes are never echoed to stdout. Run rotation events on a hardened, air-gapped or access-controlled machine.
+
+To report a vulnerability, open a [private security advisory](https://github.com/JackKXCO/kxco-pq-cli/security/advisories/new) or email **security@kxco.ai**.
+
+## Funding
+
+Maintained by **Shayne Heffernan** and **John Heffernan** at [KXCO by Knightsbridge](https://kxco.ai).
+
+[Knightsbridge Law](https://knightsbridge.law) · [target150.com](https://target150.com) · [livetradingnews.com](https://livetradingnews.com)
 
 ## License
 
