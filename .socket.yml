@@ -1,0 +1,22 @@
+version: 2
+
+# https://docs.socket.dev/docs/socket-yml
+
+issues:
+  cve:
+    action: error
+  malware:
+    action: error
+  protestware:
+    action: error
+  new-author:
+    action: warn
+  install-scripts:
+    action: warn
+  telemetry:
+    action: warn
+
+# Both runtime deps are maintained by this organisation.
+ignore:
+  - "kxco-post-quantum"
+  - "kxco-pq-attest"
