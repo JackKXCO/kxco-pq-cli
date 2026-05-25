@@ -126,3 +126,9 @@ The manifest and well-known shapes this CLI emits are stable under the [webhook 
 ## License
 
 Apache 2.0. The CLI emits artefacts consumable by the (Apache-licensed) webhook package and the (MIT-licensed) `kxco-post-quantum` primitive package. See [LICENSE](./LICENSE).
+
+## Maintainers
+
+Shayne Heffernan · John Heffernan — [KXCO by Knightsbridge](https://kxco.ai)
+
+Deployed in production at [target150.com](https://target150.com), [knightsbridgelaw.com](https://knightsbridgelaw.com), [livetradingnews.com](https://livetradingnews.com).
