@@ -1,6 +1,6 @@
 {
   "name": "kxco-pq-cli",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "CLI for kxco-post-quantum: keygen, fingerprint, key rotation, signed rotation manifests. Generates ML-DSA-65 keypairs deterministically from a master secret + label; emits well-known JSON + RFC 8785 JCS-canonical signed manifests during rotation.",
   "keywords": [
     "post-quantum",
@@ -24,8 +24,12 @@
   "license": "Apache-2.0",
   "author": "KXCO by Knightsbridge <hello@kxco.ai>",
   "contributors": [
-    { "name": "Shayne Heffernan" },
-    { "name": "John Heffernan" }
+    {
+      "name": "Shayne Heffernan"
+    },
+    {
+      "name": "John Heffernan"
+    }
   ],
   "homepage": "https://kxco.ai",
   "repository": {
