@@ -53,13 +53,13 @@
     "node": ">=20.19"
   },
   "peerDependencies": {
-    "kxco-post-quantum": "^1.1.6"
+    "kxco-post-quantum": "^1.1.12"
   },
   "dependencies": {
     "kxco-pq-attest": "^1.0.0"
   },
   "devDependencies": {
-    "kxco-post-quantum": "^1.1.6"
+    "kxco-post-quantum": "^1.1.12"
   },
   "scripts": {
     "test": "node --test test/jcs.test.js test/manifest.test.js test/keygen.test.js test/fingerprint.test.js test/rotate.test.js test/attest.test.js",
