@@ -1,7 +1,7 @@
 {
   "name": "kxco-pq-cli",
-  "version": "1.2.0",
-  "description": "CLI for kxco-post-quantum: keygen, fingerprint, key rotation, signed rotation manifests. Generates ML-DSA-65 keypairs deterministically from a master secret + label; emits well-known JSON + RFC 8785 JCS-canonical signed manifests during rotation.",
+  "version": "1.2.1",
+  "description": "CLI for KXCO post-quantum institution key management: generate ML-DSA-65 keypairs, rotate keys with optional on-chain anchoring, sign files, and verify signatures without writing any code.",
   "keywords": [
     "post-quantum",
     "pqc",
